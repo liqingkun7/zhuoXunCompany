@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+		<a class="navbar-brand" href="#"><img
+			th:src="@{/img/logozhuoxun.png}" style="width: 50px; height: 20px;" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarTogglerDemo02"
+			aria-controls="navbarTogglerDemo02" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active"><a class="nav-link" href="#">天津卓讯科技后台管理系统<span
+						class="sr-only">(current)</span></a></li>
+			</ul>
+			<div class="dropdown">
+				<button class="btn btn-outline-success dropdown-toggle"
+					type="button" id="dropdownMenuButton" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">个人帐户</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">个人信息</a> <a class="dropdown-item"
+						href="#">更新密码</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">退出</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active"><a class="nav-link" href="#">首页
+					<span class="sr-only">(current)</span>
+			</a></li>
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				role="button" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false"> Dropdown </a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a> <a
+						class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search"
+				placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+		</form>
+	</div>
+	</nav>
+</body>
+</html>

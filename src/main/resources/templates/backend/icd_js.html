@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>引用公共JS文件</title>
+</head>
+<body>
+	<!-- th:src 超链接 -->
+	<script th:src="@{/plugins/jQuery/jquery-2.2.3.min.js}"></script>
+	<script th:src="@{/plugins/My97DatePicker/lang/zh-cn.js}"></script>
+	<script th:src="@{/plugins/slimScroll/jquery.slimscroll.min.js}"></script>
+	<script th:src="@{/plugins/My97DatePicker/WdatePicker.js}"></script>
+	<script
+		th:src="@{/DataTables-1.10.15/media/js/jquery.dataTables.min.js}"></script>
+	<script th:src="@{/bootstrap-4.0.0-dist/js/bootstrap.min.js}"></script>
+	<script th:src="@{/plugins/kindeditor/kindeditor-all.js}"></script>
+	<script th:src="@{/plugins/kindeditor/lang/zh-CN.js}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+	
+	<!--实现页面中的全选和反选-->
+	$(function() {
+        //实现全选反选
+        $("#theadInp").on('click', function() {
+            $("tbody input:checkbox").prop("checked", $(this).prop('checked'));
+        })
+        $("tbody input:checkbox").on('click', function() {
+            //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+            if($("tbody input:checkbox").length === $("tbody input:checked").length) {
+                $("#theadInp").prop("checked", true);
+            } else {
+                $("#theadInp").prop("checked", false);
+            }
+        })
+    })
+    
+	
+	var vue = new Vue({
+        el:"#app",  
+        methods:{
+            yourMethod:function(id){ 
+                 $.ajax({
+                    type : "POST",
+                    url : "selectCsdbById.shtml",
+                    data : {
+                        id : id,
+                    },
+                    success : function(data) {
+　　　　　　　　　　　　　　 var message = $.parseJSON(data);//后台返回的json数据需要转为对象
+                         vue.selectById=message;//把后台返回的JSON数据赋给selectById
+                    },
+                    error : function(){
+                        alert("错误");
+                    }
+
+                });
+            },
+            updateById:function(){
+                $.ajax({
+                        type : "POST",
+                        url : "updateById.shtml",
+                        data : vue.selectById,
+                        success : function(data) {
+                            alert(data);
+                        },
+                        error : function(){
+                            alert("错误");
+                        }
+
+                    });
+            },
+        }
+    })  
+	</script>
+</body>
+</html>

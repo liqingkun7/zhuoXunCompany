@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!--datetable-->
+		<link rel="stylesheet" href="../plugins/My97DatePicker/skin/default/datepicker.css" />
+		<link rel="stylesheet" href="../plugins/My97DatePicker/skin/WdatePicker.css" />
+		<link rel="stylesheet" href="../css/my.css" />
+		<link rel="stylesheet" href="../plugins/kindeditor/themes/default/default.css" />
+		<title>用户列表页面</title>
+
+	</head>
+
+	<body data-spy="scroll" data-target="#navbar-example">
+		<!--
+        	作者：offline
+        	时间：2018-06-11
+        	描述：标题栏开始
+        -->
+		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><img src="../img/logozhuoxun.png" style="width: 50px;height: 20px;" /></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">天津卓讯科技后台管理系统<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<div class="dropdown">
+					<button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   个人帐户
+  </button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">个人信息</a>
+						<a class="dropdown-item" href="#">更新密码</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">退出</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+			</form>
+		</div>
+		</nav>
+		<!--标题栏结束-->
+		<!--
+        	作者：offline
+        	时间：2018-06-11
+        	描述：主体内容
+        -->
+		<div class="row container-fluid">
+			<!--
+            	作者：offline
+            	时间：2018-06-11
+            	描述：左侧菜单栏开始
+            -->
+			<div class="col-md-2" style="height: 850px; background-color: #ECECEC;padding: 0px;margin: 0px;" data-spy="scroll">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<div class="sidebar" id="scrollspy" style="padding: 0px;margin: 0px;">
+					<!-- Sidebar Menu -->
+					<ul class="sidebar-menu">
+						<li class="treeview">
+							<a href="#" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-database-download.svg" /> <span>学生信息管理</span>
+								<span class="float-right">
+              <img  class="pull-right imgsm"     src="../glyph-iconset-master/svg/si-glyph-arrow-left.svg"/> 
+            </span>
+							</a>
+							<ul class="treeview-menu collapse multi-collapse" id="multiCollapseExample2">
+								<li>
+									<a href="list02.html"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户跟踪记录</a>
+								</li>
+								<li>
+									<a href="list.html"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户开发计划</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 成单客户</a>
+								</li>
+								<li>
+									<a href="list.html"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 流失客户</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-database-download.svg" /> <span>院校管理</span>
+								<span class="float-right">
+              <img  class="pull-right imgsm"     src="../glyph-iconset-master/svg/si-glyph-arrow-left.svg"/> 
+            </span>
+							</a>
+							<ul class="treeview-menu collapse multi-collapse" id="multiCollapseExample3">
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户信息</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户指派</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 潜客共享</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-database-download.svg" /> <span>基础数据</span>
+								<span class="float-right">
+              <img  class="pull-right imgsm"   src="../glyph-iconset-master/svg/si-glyph-arrow-left.svg"/> 
+            </span>
+							</a>
+							<ul class="treeview-menu collapse multi-collapse" id="multiCollapseExample4">
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 开班信息</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户分类</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 客户来源</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 学校管理</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 专业管理</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 班级管理</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 产品信息</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="#" data-toggle="collapse" data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-database-download.svg" /> <span>知识库</span>
+								<span class="float-right">
+              <img  class="pull-right imgsm"     src="../glyph-iconset-master/svg/si-glyph-arrow-left.svg"/> 
+            </span>
+							</a>
+							<ul class="treeview-menu collapse multi-collapse" id="multiCollapseExample5">
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 知识列表</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 知识库分类</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="#" data-toggle="collapse" data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-database-download.svg" /> <span>系统管理</span>
+								<span class="float-right">
+              <img  class="pull-right imgsm"     src="../glyph-iconset-master/svg/si-glyph-arrow-left.svg"/> 
+            </span>
+							</a>
+							<ul class="treeview-menu collapse multi-collapse" id="multiCollapseExample6">
+								<li class="active">
+									<a href="javascript:;"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 公告信息</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 日志信息</a>
+								</li>
+								<li>
+									<a href="#"><img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" /> 数据备份</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /.sidebar-menu -->
+				</div>
+				<!-- /.sidebar -->
+			</div>
+
+			<!--左侧菜单栏结束-->
+			<!--右侧主体内容开始-->
+			<div class="col-md-10 ">
+				<!--
+                	作者：offline
+                	时间：2018-06-11
+                	描述：路径导航
+                -->
+				<div class="row" style="margin-top: 10px;">
+					<div class="col-md-8">
+						<span class="align-middle" style="font-family: '微软雅黑';font-size: 24px;margin: 20px;">用户信息</span>
+						<span class="align-text-top" style="color: gainsboro;">2018-09-09</span>
+					</div>
+
+					<nav aria-label="breadcrumb" class="col-md-4" style="font-size:13px ;text-align: right;">
+						<ol class="breadcrumb" style="margin: 0px;background-color: white;">
+							<li class="breadcrumb-item">
+								<a href="#">当前位置：首页</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">用户</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">列表页面</li>
+						</ol>
+					</nav>
+				</div>
+
+				<!--
+                	作者：offline
+                	时间：2018-06-13
+                	描述：搜索框
+                -->
+				<div class="card" style="border-top:darkblue  solid 3px; margin-bottom: 20px;">
+					<div class="card-header">
+						组合查询
+					</div>
+					<div class="card-body">
+						<div class="form-group row">
+							<label for="inputEmail3" class="col-sm-2 col-form-label" style="text-align: center;">姓名：</label>
+							<div class="col-sm-4">
+								<input type="email" class="form-control" id="inputEmail3" placeholder="请输入用户名">
+							</div>
+							<label for="inputEmail3" class="col-sm-2 col-form-label" style="text-align: center;">标题关键字：</label>
+							<div class="col-sm-4">
+								<input type="email" class="form-control" id="inputEmail3" placeholder="请输入标题关键字">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputEmail3" class="col-sm-2 col-form-label" style="text-align: center;">性别：</label>
+							<div class="col-sm-4">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									<label class="form-check-label" for="inlineRadio1">男</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" checked="checked" id="inlineRadio2" value="option2">
+									<label class="form-check-label" for="inlineRadio2">女</label>
+								</div>
+							</div>
+							<label for="inputEmail3" class="col-sm-2 col-form-label" style="text-align: center;">日期：</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control is-valid" id="timkselect" placeholder="请选择入职日期">
+							</div>
+						</div>
+					</div>
+					<div class="card-footer text-muted" align="center">
+						<button type="reset" value="重置" class="btn  btn-primary" style="margin-right: 20px;">重置</button>
+						<button type="submit" value="查询" class="btn  btn-success">查询</button>
+					</div>
+				</div>
+
+				<!--
+                	作者：offline
+                	时间：2018-06-11
+                	描述：新增用户按钮
+                -->
+				<div class="card">
+					<div class="card-header" style="border-top: 3px solid  green;">
+						<span>数据表格</span>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg" style="float: right;margin: 0px;">新增用户</button>
+					</div>
+					<div class="card-body">
+						<!--
+                	作者：offline
+                	时间：2018-06-11
+                	描述：表格开始
+                -->
+						<div class="table-responsive">
+							<table class="table table-striped table-light table-hover table-bordered">
+								<thead>
+									<tr>
+										<th scope="col"><i class="glyphicon  glyphicon-arrow-left"></i>编号</th>
+										<th scope="col">用户名</th>
+										<th scope="col">密码</th>
+										<th scope="col">入职时间</th>
+										<th scope="col">备注</th>
+										<th scope="col">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">2</th>
+										<td>张三</td>
+										<td>123456</td>
+										<td>2018年2月19日</td>
+										<td>2018年2月19日</td>
+										<td>
+											<a href="#tpl" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">编辑</a>&nbsp;&nbsp;&nbsp;
+											<a href="#tpl" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">1</th>
+										<td>张三</td>
+										<td>123456</td>
+										<td>2018年2月19日</td>
+										<td>2018年2月19日</td>
+										<td>
+											<a href="#tpl" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">编辑</a>&nbsp;&nbsp;&nbsp;
+											<a href="#tpl" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>张三</td>
+										<td>123456</td>
+										<td>2018年2月19日</td>
+										<td>2018年2月19日</td>
+										<td>
+											<a href="#tpl" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">编辑</a>&nbsp;&nbsp;&nbsp;
+											<a href="#tpl" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>张三</td>
+										<td>123456</td>
+										<td>2018年2月19日</td>
+										<td>2018年2月19日</td>
+										<td>
+											<a href="#tpl" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">编辑</a>&nbsp;&nbsp;&nbsp;
+											<a href="#tpl" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>张三</td>
+										<td>123456</td>
+										<td>2018年2月19日</td>
+										<td>2018年2月19日</td>
+										<td>
+											<a href="#tpl" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">编辑</a>&nbsp;&nbsp;&nbsp;
+											<a href="#tpl" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--
+            	作者：offline
+            	时间：2018-06-11
+            	描述：分页
+            -->
+							<nav aria-label="Page navigation example" style="float: right;">
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+											<span class="sr-only">Previous</span>
+										</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+											<span class="sr-only">Next</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--表格样式结束-->
+		</div>
+		<!--右侧主体内容结束-->
+		</div>
+		<!-- 删除模态框 -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">用户删除对话框</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+					</div>
+					<div class="modal-body">
+						您确认删除吗？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-success">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新增、编辑模态框 -->
+		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">用户信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+					</div>
+					<div class="modal-body">
+						<form method="post" action="#dd">
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">用户名:</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control is-valid" id="exampleInputPassword1" placeholder="请输入用户名">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">密  码:</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control is-valid" id="exampleInputPassword1" placeholder="请输入密码">
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">家庭地址:</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control is-valid" id="exampleInputPassword1" placeholder="请输入家庭地址">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">所属城市:</label>
+								<div class="col-sm-10">
+									<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+										<option selected>请选择</option>
+										<option value="1">天津</option>
+										<option value="2">北京</option>
+										<option value="3">山西</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">备  注:</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control is-valid" id="exampleInputPassword1" placeholder="请输入备注信息">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">性  别:</label>
+								<div class="col-sm-10">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">男</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">女</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">入职日期:</label>
+								<div class="input-group mb-3 col-sm-10">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<img class="imglg" src="../glyph-iconset-master/svg/si-glyph-cente-justify.svg" />
+										</div>
+									</div>
+									<input type="text" class="form-control" id="timktask" aria-label="Text input with checkbox">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">上传头像:</label>
+								<div class="col-sm-10">
+									<input type="file" class="custom-file-input" id="validatedCustomFile" required>
+									<label class="custom-file-label" for="validatedCustomFile">请选择</label>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="exampleInputPassword1" class="col-sm-2 col-form-label">备  注:</label>
+								<div class="col-sm-10">
+									<textarea class="form-control" id="description" name="description" rows="3"></textarea>
+								</div>
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-success">保存</button>
+					</div>
+					</form>
+				</div>
+				<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+				<script src="../plugins/My97DatePicker/lang/zh-cn.js"></script>
+				<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+				<script src="../plugins/My97DatePicker/WdatePicker.js"></script>
+				<script src="../DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>
+				<script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+				<script src="../plugins/kindeditor/kindeditor-all.js"></script>
+				<script src="../plugins/kindeditor/lang/zh-CN.js"></script>
+				<script type="text/javascript">
+					//点击时间日期控件
+					$("#timktask").click(function() {
+						WdatePicker(); //调用my97datepicker封装JS
+					});
+					$("#timkselect").click(function() {
+						WdatePicker(); //调用my97datepicker封装JS
+					});
+					//富文本编辑器创建---显示哪个控件中
+					var editor = KindEditor.create('textarea[name="description"]', {
+						width: '100%',
+						urlType: "", //设置站内本地URL：默认是""，可选值有"relative"、"absolute"、"domain"
+						uploadJson: 'ke_upload', //指定上传文件的服务器端程序请求路径
+						fileManagerJson: 'ke_manager', //指定浏览远程图片的服务器端程序请求路径
+						allowFileManager: true //是否允许浏览远程服务器上的文件。
+					});
+
+					//上传主图  调用富文本编辑中文件上传功能
+					var editor2 = KindEditor.editor({
+						allowFileManager: true //是否允许浏览远程服务器上的文件。
+					});
+				</script>
+	</body>
+
+</html>

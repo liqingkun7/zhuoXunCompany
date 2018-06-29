@@ -1,0 +1,51 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /zhuoxun
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/zhuoxun?characterEncoding=UTF8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    password: null
+    timeout: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.lzx.entity
+  typeEnumsPackage: com.zhuoxun.common.enums
+  global-config:
+    id-type: 2
+    field-strategy: 2
+    db-column-underline: true
+    refresh-mapper: true
+    key-generator: com.baomidou.mybatisplus.incrementer.H2KeyGenerator
+    logic-delete-value: 0
+    logic-not-delete-value: 1
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    sql-parser-cache: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

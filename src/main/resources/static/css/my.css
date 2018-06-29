@@ -1,0 +1,62 @@
+	.sidebar-menu ul li {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				list-style: none;
+			}
+			
+			.treeview {
+				list-style: none;
+				text-align: left;
+				line-height: 40px;
+				padding: 0px; 
+				margin: 0px;
+				color: black;
+				background-color: #ECECEC;
+			}
+			
+			.treeview a {
+				text-decoration: none;
+				padding-left: 10px;
+			}
+			
+			.treeview li:hover {
+				background-color: #ecf5ff;
+			}
+			
+			.treeview:hover {
+				background-color: #ecf5ff;
+			}
+			
+			.sidebar-menu ul li a {
+				margin-top: 10px;
+				list-style: none;
+				color: black;
+				padding-left: 15px;
+				font-size: 14px;
+			}
+			
+			.sidebar-menu ul {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.sidebar-menu ul>li {
+				background-color: white;
+				text-align: left;
+				line-height: 40px;
+				margin: 0px;
+				margin-bottom: 1px;
+				padding-left: 10px;
+			}
+			
+			.sidebar-menu {
+				padding: 0px;
+				margin: 0px;
+			}
+			.imgsm{
+				margin-right: 5px;
+				width: 11px;height: 11px;
+			}
+			.imglg{
+				width: 16px;height: 16px;
+			}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="sidebar" id="scrollspy" style="padding: 0px; margin: 0px;">
+		<!-- Sidebar Menu -->
+		<ul class="sidebar-menu">
+			<li
+				class="treeview btn btn-primary btn-lg btn-block btn-secondary active"><a
+				href="#" data-toggle="collapse" data-target="#multiCollapseExample2"
+				aria-expanded="false" aria-controls="multiCollapseExample2"><img
+					class="imglg"
+					th:src="@{/glyph-iconset-master/svg/si-glyph-database-download.svg}"
+					style="fill: white" /> <span style="color: white; font-size: 15px">权限管理</span>
+					<span class="float-right"> <img class="pull-right imgsm"
+						th:src="@{/glyph-iconset-master/svg/si-glyph-arrow-left.svg}" />
+				</span> </a>
+				<ul class="treeview-menu collapse multi-collapse"
+					id="multiCollapseExample2">
+					<li><a th:href="@{/mng/user/findByPager}"><img
+							class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							用户管理</a></li>
+					<li><a th:href="@{/mng/dept/findByPager}"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							部门管理</a></li>
+					<li><a th:href="@{/mng/news/findByPager}"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							新闻管理</a></li>
+				</ul></li>
+
+			<li class="treeview"><a href="#" data-toggle="collapse"
+				data-target="#multiCollapseExample3" aria-expanded="false"
+				aria-controls="multiCollapseExample3"><img class="imglg"
+					th:src="@{/glyph-iconset-master/svg/si-glyph-database-download.svg}" />
+					<span>基础信息</span> <span class="float-right"> <img
+						class="pull-right imgsm"
+						th:src="@{/glyph-iconset-master/svg/si-glyph-arrow-left.svg}" />
+				</span> </a>
+				<ul class="treeview-menu collapse multi-collapse"
+					id="multiCollapseExample3">
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							客户信息</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							客户指派</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							潜客共享</a></li>
+				</ul></li>
+
+			<li class="treeview"><a href="#" data-toggle="collapse"
+				data-target="#multiCollapseExample4" aria-expanded="false"
+				aria-controls="multiCollapseExample4"><img class="imglg"
+					th:src="@{/glyph-iconset-master/svg/si-glyph-database-download.svg}" />
+					<span>基础数据</span> <span class="float-right"> <img
+						class="pull-right imgsm"
+						th:src="@{/glyph-iconset-master/svg/si-glyph-arrow-left.svg}" />
+				</span> </a>
+				<ul class="treeview-menu collapse multi-collapse"
+					id="multiCollapseExample4">
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							开班信息</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							客户分类</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							客户来源</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							学校管理</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							专业管理</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							班级管理</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							产品信息</a></li>
+				</ul></li>
+			<li class="treeview"><a href="#" data-toggle="collapse"
+				data-target="#multiCollapseExample5" aria-expanded="false"
+				aria-controls="multiCollapseExample5"><img class="imglg"
+					th:src="@{/glyph-iconset-master/svg/si-glyph-database-download.svg}" />
+					<span>学员管理</span> <span class="float-right"> <img
+						class="pull-right imgsm"
+						th:src="@{/glyph-iconset-master/svg/si-glyph-arrow-left.svg}" />
+				</span> </a>
+				<ul class="treeview-menu collapse multi-collapse"
+					id="multiCollapseExample5">
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							知识列表</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							知识库分类</a></li>
+				</ul></li>
+			<li class="treeview active"><a href="#" data-toggle="collapse"
+				data-target="#multiCollapseExample6" aria-expanded="false"
+				aria-controls="multiCollapseExample6"><img class="imglg"
+					th:src="@{/glyph-iconset-master/svg/si-glyph-database-download.svg}" />
+					<span>系统管理</span> <span class="float-right"> <img
+						class="pull-right imgsm"
+						th:src="@{/glyph-iconset-master/svg/si-glyph-arrow-left.svg}" />
+				</span> </a>
+				<ul class="treeview-menu collapse multi-collapse"
+					id="multiCollapseExample6">
+					<li class="active"><a href="javascript:;"><img
+							class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							公告信息</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							日志信息</a></li>
+					<li><a href="#"><img class="imglg"
+							th:src="@{/glyph-iconset-master/svg/si-glyph-cente-justify.svg}" />
+							数据备份</a></li>
+				</ul></li>
+		</ul>
+	</div>
+</body>
+</html>
